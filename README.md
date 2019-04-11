@@ -43,12 +43,11 @@ An abstraction class for the Campus Labs Engage product
 	use EngageApi\Client as EngageClient;
 
 	$baseUri  = 'https://<subdomain>.campuslabs.com/engage/api/';
-	$clientId = '';
-	$secret   = '';
+	$apiKey   = '';
 
 	try {
 	    echo "<pre>";
-	    $api = new EngageClient($baseUri, $clientId, $secret);
+	    $api = new EngageClient($baseUri, $apiKey);
 	    $o = $api->getOrganization('<integer>');
 	    print_r($o);
 	    echo "</pre>";
