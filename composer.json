@@ -1,0 +1,22 @@
+{
+    "name" : "unoadis/engage-api",
+    "description": "Campus Laps Engage API client for PHP Users.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "EngageApi\\": "src/EngageApi"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "EngageApi\\Tests\\": ["tests/EngageApi/Tests"]
+        }
+    },
+    "require": {
+        "php": "^7.0",
+        "guzzlehttp/guzzle": "^6.0"
+  	},
+    "require-dev": {
+        "phpunit/phpunit": "^5"
+	}
+}
