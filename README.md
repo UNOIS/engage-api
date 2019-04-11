@@ -20,7 +20,7 @@ An abstraction class for the Campus Labs Engage product
 	"repositories": [
         {
         	"type" : "vcs",
-        	"url": "https://github.com/unoadis/ems-platform"
+        	"url": "https://github.com/unoadis/engage-api"
         }
    ```
    ```json
