@@ -1,5 +1,5 @@
 {
-    "name" : "unoadis/engage-api",
+    "name" : "unois/engage-api",
     "description": "Campus Laps Engage API client for PHP Users.",
     "type": "library",
     "autoload": {
