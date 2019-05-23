@@ -82,10 +82,19 @@ class Client
      * Call the end membership endpoint
      * @param  int    $id The id of the endpoint
      * @return object     The full json in object notication if successful
+     * @throws Exception  When unable to successfully end the membership
      */
     public function endMembership($id)
     {
-        return $this->request('DELETE', 'Memberships/'.$id);
+        try {
+            $ret = $this->request('DELETE', 'Memberships/'.$id);
+            return $ret;
+        } catch (ClientException $e) {
+            $json = json_decode($e->getResponse()->getBody()->getContents());
+            $json->statusCode = $e->getResponse()->getStatusCode();
+            throw new Exception( json_encode($json) );
+        }
+        
     }
 
     /**
